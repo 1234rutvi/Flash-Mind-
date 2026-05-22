@@ -1,0 +1,1 @@
+!pip install streamlit streamlit-card pdfplumber python-docx plotly gtts transformers sentence-transformers accelerate faiss-cpu networkx matplotlib pyngrok
