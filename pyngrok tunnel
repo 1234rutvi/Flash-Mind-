@@ -1,0 +1,20 @@
+from pyngrok import ngrok
+import subprocess
+import time
+
+# ADD YOUR NGROK TOKEN
+ngrok.set_auth_token("3DykYu4BF9j0jav7c6CzcNBUMVQ_3ywPgcAfRFBc3ybwZELaH")
+
+# START STREAMLIT
+process = subprocess.Popen(
+    ["streamlit", "run", "app.py"]
+)
+
+# WAIT FOR STREAMLIT TO START
+time.sleep(15)
+
+# CREATE PUBLIC LINK
+public_url = ngrok.connect(8501)
+
+print("FlashMind AI Website:")
+print(public_url)
